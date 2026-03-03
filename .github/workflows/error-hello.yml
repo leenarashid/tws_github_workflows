@@ -1,0 +1,32 @@
+name: Hello Devops
+on: 
+ push:
+   branches: [main]
+
+jobs:
+  greet:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+      - name: Say Hello
+        run: echo "Say Hello Devops!!"
+      - name: Print date & time
+        run: | 
+              echo "Print the current time and date: "
+              date
+      - name: Print the branch name
+        run: echo "Branch that triggered the run is:${{ github.ref_name }}"
+      - name: List all the files in the folder
+        run: |
+             echo "These are the files present in the current directory: "
+             ls -la
+      - name: Print the OS
+        run: |
+             echo "The Host OS is: $(uname -a)"
+      - name: Intentional Failure
+        run: echho "This will fail"
+        
+      
+
+         
