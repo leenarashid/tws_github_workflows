@@ -25,7 +25,7 @@ jobs:
         run: |
              echo "The Host OS is: $(uname -a)"
       - name: Intentional Failure
-        run: exit 1
+        run: echo "The errors have ben observed"
         
       
 
