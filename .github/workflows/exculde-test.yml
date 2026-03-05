@@ -1,6 +1,6 @@
 name: Exclude Version Test
 on: 
-push:
+ push:
   branches: [main]
 
 jobs:
@@ -10,7 +10,7 @@ jobs:
        matrix:
           python-version: ["3.10","3.11","3.12"]
           os: [windows-latest, ubuntu-latest] 
-          if: !(${{ martix.os }} == "windows-latest" && ${{ matrix.python-version }} == "3.11" )
+          if: !( martix.os  == 'windows-latest' &&  matrix.python-version  == '3.11' )
     steps:   
        - name: Cloing user-space
          uses: actions/checkout@v4
