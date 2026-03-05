@@ -1,6 +1,9 @@
 name: Daily Workflow
 on:
-schedule:
+ workflow_dispatch:
+ push:
+  branches: [main]
+    schedule:
      - cron: "0 0 * * *"
 
 jobs:
