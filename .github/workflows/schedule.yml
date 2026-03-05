@@ -2,13 +2,13 @@ name: Daily Workflow
 on:
  workflow_dispatch:
  push:
-  branches: [main]
-    schedule:
+   branches: [main]
+ schedule:
      - cron: "0 0 * * *"
 
 jobs:
  schedule_update:
- runs-on: ubuntu-latest
+   runs-on: ubuntu-latest
  steps:
   - name: Print Schedule message
     run: |
