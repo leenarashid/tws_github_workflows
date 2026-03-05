@@ -1,7 +1,6 @@
 ---
 name: Daily Workflow
 on:
-  workflow_dispatch: 
   schedule:
     - cron: 0 0 * * *
 jobs:
@@ -13,3 +12,4 @@ jobs:
           echo "Workflow running at midnight UTC"
           date
 
+# workflow_dispatch: donot need to add since its a manual trigger
