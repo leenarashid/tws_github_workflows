@@ -11,9 +11,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Branch Check
-        run: echo "The branch name is: ${{ github.head_ref }}"
+        run: 'echo "The branch name is: ${{ github.head_ref }}"'
 
       - name: New Branch
-        run: echo "A new branch ${{ github.head_ref }} has been created"
+        run: 'echo "A new branch ${{ github.head_ref }} has been created" '
 
 
