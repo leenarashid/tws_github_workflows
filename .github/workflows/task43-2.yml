@@ -1,0 +1,17 @@
+name: Environment Variables
+on:
+  workflow_dispatch:
+env:
+  APP_NAME: myapp
+  ENVIRONMENT: staging
+  VERSION: 1.0.0
+jobs:
+  env-variables:
+    runs-on: ubunut-latest
+    steps:
+      - name: Application name
+        run: echo "$APP_NAME"
+      - name: Environment name
+        run: echo "$ENVIRONMENT"
+      - name: Version name
+        run: echo "$VERSION"
