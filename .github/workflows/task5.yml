@@ -4,9 +4,11 @@ on:
     branches: [main]
 jobs:
   label-runner:
-    runs-on: [self-hosted, ubuntu, my linux runner]
+    runs-on: [self-hosted, my linux runner]
     steps:
       - name: Checkout
         uses: actions/checkout@v4
-      - name: Print Hostname
-        run: hostname
+      - name: Print Runner-name
+        run:  $RUNNER_NAME
+      - name: Print Runner-labels
+        run:  $RUNNER_LABELS }}
