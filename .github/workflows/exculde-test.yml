@@ -15,7 +15,7 @@ jobs:
        - name: Cloing user-space
          uses: actions/checkout@v4
 
-       - name: Installing Python
+       - name: Python Installation
          uses: actions/set-python@v4
          with: python-version ${{ matrix.python-version }}
 
