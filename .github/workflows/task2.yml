@@ -2,14 +2,15 @@ name: Pre-installed Version Check
 on:
   push:
     branches: [main]
-job: 
+jobs: 
   Version-Check
   runs-on: ubuntu-latest
-  for i in python git docker node; do
-    dpkg -l | grep $i
+  
   done   
 steps: 
   - name: Print the pre-installed package
-    run: echo "grep $i"
+    run: |
+    for i in python git docker node; do
+    dpkg -l | grep $i || echo "$i is not installed"
     
   
