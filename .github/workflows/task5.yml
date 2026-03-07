@@ -9,6 +9,6 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
       - name: Print Runner-name
-        run:  $RUNNER_NAME
+        run:  echo "$RUNNER_NAME"
       - name: Print Runner-labels
-        run:  $RUNNER_LABELS }}
+        run:  echo "$RUNNER_LABELS"
