@@ -27,3 +27,5 @@ jobs:
 
       - name: Python Version
         run: python --version
+      - name: Print OS
+        run: $ {{ uname -a }}
