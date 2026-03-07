@@ -11,4 +11,11 @@ jobs:
       - name: Print Runner-name
         run:  echo "$RUNNER_NAME"
       - name: Print Runner-labels
-        run:  echo "$RUNNER_LABELS"
+        run:  echo "$RUNNER_LABELS" 
+      - name: Print job for runner label output
+        run: | 
+             echo "Print pwd"
+             pwd
+             echo "Hostname"
+             hostname
+         
