@@ -13,7 +13,7 @@ jobs:
         os: [windows-latest, macos-latest, ubuntu-latest]
 
     steps:
-      - name: Cloning Userspace
+      - name: Cloning the Userspace
         uses: actions/checkout@v4
 
       - name: Print OS using uname
