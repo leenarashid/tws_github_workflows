@@ -5,18 +5,19 @@ on:
 jobs:
   system-details:
     runs-on: self-hosted
-      steps:
-        - name: Code Checkout
-          uses: actions/checkout@v4
-        - name: Print Host machine
-          run: hostname
-        - name: Print Work Dir
-          run: pwd
-        - name: File Creation
-          run: |
+    steps:
+      - name: Code Checkout
+        uses: actions/checkout@v4
+      - name: Print Host machine
+        run: hostname
+      - name: Print Work Dir
+        run: pwd
+      - name: File Creation
+        run: |
              touch myfile.txt
              ls -la
              if ( -f myfile.txt )
              echo "File has been found"
+             fi
              
              
