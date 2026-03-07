@@ -3,14 +3,13 @@ on:
   push:
     branches: [main]
 jobs: 
-  Version-Check
-  runs-on: ubuntu-latest
-  
-  done   
-steps: 
-  - name: Print the pre-installed package
-    run: |
-    for i in python git docker node; do
-    dpkg -l | grep $i || echo "$i is not installed"
+  version-check:
+    runs-on: ubuntu-latest
     
+    steps: 
+    - name: Print the pre-installed package
+      run: |
+        for i in python git docker node; do
+          dpkg -l | grep $i || echo "$i is not installed"
+        done 
   
