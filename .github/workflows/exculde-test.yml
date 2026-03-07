@@ -1,27 +1,29 @@
----
 name: Exclude Version Test
+
 on:
   push:
     branches:
       - main
+
 jobs:
   exclude-job:
-    runs-on: ${{matrix.os}}
+    runs-on: ${{ matrix.os }}
+
     strategy:
       matrix:
-        python-version:
-          - "3.10"
-          - "3.11"
-          - "3.12"
-        os:
-          - windows-latest
-          - ubuntu-latest
-   if: ${{ !(matrix.os == 'windows-latest' && matrix.python-version == '3.11') }}
-   steps:
-    - name: Cloing user-space
-      uses: actions/checkout@v4
-    - name: Installing Python
-      uses: actions/setup-python@v4
-      with: python-version ${{ matrix.python-version }}
-    - name: Python Version
-      run: python --version
+        python-version: ["3.10", "3.11", "3.12"]
+        os: [windows-latest, ubuntu-latest]
+        exclude: 
+         - os: windows-latest
+         - python-version: "3.10"
+    steps:
+      - name: Cloning repository
+        uses: actions/checkout@v4
+
+      - name: Installing Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: ${{ matrix.python-version }}
+
+      - name: Python Version
+        run: python --version
