@@ -16,12 +16,12 @@ jobs:
         os:
           - windows-latest
           - ubuntu-latest
-    if: ${{ !(matrix.os == 'windows-latest' && matrix.python-version == '3.11') }}
-    steps:
-      - name: Cloing user-space
-        uses: actions/checkout@v4
-      - name: Installing Python
-        uses: actions/set-python@v4
-        with: python-version ${{ matrix.python-version }}
-      - name: Python Version
-        run: python --version
+   if: ${{ !(matrix.os == 'windows-latest' && matrix.python-version == '3.11') }}
+   steps:
+    - name: Cloing user-space
+      uses: actions/checkout@v4
+    - name: Installing Python
+      uses: actions/setup-python@v4
+      with: python-version ${{ matrix.python-version }}
+    - name: Python Version
+      run: python --version
