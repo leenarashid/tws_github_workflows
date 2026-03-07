@@ -16,7 +16,7 @@ jobs:
         run: |
              touch myfile.txt
              ls -la
-             if [ -f myfile.txt ]
+             if [ -f myfile.txt ]; then
                  echo "File has been found"
              fi
              
