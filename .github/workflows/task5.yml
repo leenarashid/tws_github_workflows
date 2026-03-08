@@ -17,6 +17,6 @@ jobs:
              pwd
              echo "Hostname"
              hostname
-             touch labelfile.txt
+             cat /home/ubuntu/actions-runner/_work/tws_github_workflows/tws_github_workflows/labelfile.txt
              
              
