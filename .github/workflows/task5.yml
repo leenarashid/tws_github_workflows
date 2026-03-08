@@ -17,7 +17,7 @@ jobs:
              pwd
              echo "Hostname"
              hostname
-             echo " this my second file " >> labelfile.txt
-             cat /home/ubuntu/actions-runner/_work/tws_github_workflows/tws_github_workflows/labelfile.txt
+             echo " this my second file " >> README.md
+             cat /home/ubuntu/actions-runner/_work/tws_github_workflows/tws_github_workflows/README.md
              
              
