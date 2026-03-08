@@ -18,4 +18,6 @@ jobs:
              pwd
              echo "Hostname"
              hostname
-         
+             touch labelfile.txt
+             
+             
