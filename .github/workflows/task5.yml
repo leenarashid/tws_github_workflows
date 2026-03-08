@@ -17,6 +17,7 @@ jobs:
              pwd
              echo "Hostname"
              hostname
+             echo " this my file " >> labelfile.txt
              cat /home/ubuntu/actions-runner/_work/tws_github_workflows/tws_github_workflows/labelfile.txt
              
              
