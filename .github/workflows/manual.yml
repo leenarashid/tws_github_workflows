@@ -1,9 +1,18 @@
----
 name: Manual Workflow
-on: workflow_dispatch
+on:
+  workflow_dispatch:
+    inputs:
+      environment: 
+        description: "Enter the environment."
+        required: true
+        type: choice
+        options:
+         - staging
+         - production
 jobs:
   environment_input:
     runs-on: ubuntu-latest
     steps:
       - name: Take input
-        run: echo "The input environment taken is:${{ github.event.inputs.environment }}"
+        run: >
+          echo "The input environment taken is: ${{ github.event.inputs.environment }}"
