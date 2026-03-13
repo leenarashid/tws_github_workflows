@@ -3,7 +3,7 @@ on:
   workflow_dispatch:
     inputs:
       environment: 
-        description: "Enter the environment."
+        description: "Enter the environment"
         required: true
         type: choice
         options:
