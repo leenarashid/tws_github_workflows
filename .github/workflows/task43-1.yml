@@ -1,4 +1,4 @@
-name: Checking Dependencies
+name: Multijob Workflow
 on:
   workflow_dispatch:
 jobs:
